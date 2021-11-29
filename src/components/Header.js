@@ -2,7 +2,9 @@ import  {Navbar,Container}  from "react-bootstrap";
 
 const Header = () => {
   return <div>
-       <Navbar fixed="top" bg="dark" variant="dark">
+       <Navbar sticky="top" bg="dark" variant="dark">
+         <Navbar.Collapse />
+           <Navbar.Toggle />
     <Container fluid>
       <Navbar.Brand className="navbar" href="">React CRUD</Navbar.Brand>
     </Container>
