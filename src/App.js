@@ -73,6 +73,7 @@ const routes = [
        
       </div>
     </Router>
+    <Footer />
     </div>
   );
 }
