@@ -1,8 +1,8 @@
-const side_menu = () => {
+const SideMenu = () => {
      <div>
 
      </div>     
     
 }
 
-export default side_menu;
+export default SideMenu;
