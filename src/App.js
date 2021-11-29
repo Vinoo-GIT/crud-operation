@@ -2,14 +2,20 @@ import Header from './components/Header';
 import City from './City';
 import Tags from './Tags';
 import './App.css';
+import Footer  from './components/Footer';
 import React from "react";
+<<<<<<< HEAD
 import Footer from './components/Footer';
+=======
+import Classes from './components/Sidemenu.module.css'
+>>>>>>> 48c30e58b59d317bd608f36a82cdea52d97e349c
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import { Container, Row, Col } from 'react-bootstrap';
 
 const routes = [
  
@@ -30,16 +36,14 @@ const routes = [
   return (
     <div>
       <Header/>
-    <Router>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            padding: "10px",
-            width: "10%",
-            background: "#f0f0f0"
-          }}
-        >
-          <ul style={{ listStyleType: "none", padding: 0 }}>
+    <Router >
+    
+      <div >
+      <Container fluid className={Classes.padding_remove}>
+        <Row>
+          <Col md={2}>
+          <div className={Classes.side_menu}>
+          <ul >
             <li>
               <Link to="/">Tags</Link>
             </li>
@@ -49,26 +53,11 @@ const routes = [
             </li>
           </ul>
 
-          <Switch>
-            {routes.map((route, index) => (
-              // You can render a <Route> in as many places
-              // as you want in your app. It will render along
-              // with any other <Route>s that also match the URL.
-              // So, a sidebar or breadcrumbs or anything else
-              // that requires you to render multiple things
-              // in multiple places at the same URL is nothing
-              // more than multiple <Route>s.
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                children={<route.sidebar />}
-              />
-            ))}
-          </Switch>
-        </div>
         
-        <div style={{ flex: 1, padding: "10px" }}>
+        </div>
+          </Col>
+          <Col md={10}>
+          <div >
           <Switch>
             {routes.map((route, index) => (
               // Render more <Route>s with the same paths as
@@ -82,6 +71,11 @@ const routes = [
             ))}
           </Switch>
         </div>
+          </Col>
+        </Row>
+        </Container>
+       
+       
       </div>
     </Router>
     <Footer />
