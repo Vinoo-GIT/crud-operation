@@ -3,7 +3,7 @@ import City from './City';
 import Tags from './Tags';
 import './App.css';
 import React from "react";
-import Footer from "./components/Footer";
+import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Switch,
