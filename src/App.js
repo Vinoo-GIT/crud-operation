@@ -4,11 +4,8 @@ import Tags from './Tags';
 import './App.css';
 import Footer  from './components/Footer';
 import React from "react";
-<<<<<<< HEAD
-import Footer from './components/Footer';
-=======
+
 import Classes from './components/Sidemenu.module.css'
->>>>>>> 48c30e58b59d317bd608f36a82cdea52d97e349c
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,7 +42,7 @@ const routes = [
           <div className={Classes.side_menu}>
           <ul >
             <li>
-              <Link to="/">Tags</Link>
+              <Link to="/">Tag</Link>
             </li>
            
             <li>
