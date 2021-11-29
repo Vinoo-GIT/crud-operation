@@ -6,7 +6,7 @@ const Header = () => {
          <Navbar.Collapse />
            <Navbar.Toggle />
     <Container fluid>
-      <Navbar.Brand className="navbar" href="">React CRUD</Navbar.Brand>
+      <Navbar.Brand className="navbar text-center" href="">React CRUD</Navbar.Brand>
     </Container>
   </Navbar>
        

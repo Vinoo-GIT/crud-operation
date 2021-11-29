@@ -1,0 +1,26 @@
+.side_menu{
+    background-color: #f1f1f1;
+    height: 510px;
+}
+.side_menu 
+ul{
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.side_menu ul li  {
+    padding: 10px 12px;
+    border:1px solid #ddd;
+}
+.side_menu ul li:hover{
+    background-color: turquoise;
+    color: #fff;
+}
+.side_menu ul li a {
+    padding: 6px 12px;
+    color: #000;
+    text-decoration: none;
+}
+.padding_remove{
+    padding: 0 !important;
+}
