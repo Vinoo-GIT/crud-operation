@@ -7,7 +7,7 @@ import './App.css';
 import Footer  from './components/Footer';
 import React from "react";
 
-import Classes from './components/Sidemenu.module.css'c
+import Classes from './components/Sidemenu.module.css';
 import {
   BrowserRouter as Router,
   Switch,
