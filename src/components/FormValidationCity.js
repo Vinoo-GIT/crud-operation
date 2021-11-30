@@ -2,7 +2,7 @@ import { Col, Container, Row, Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 const FormValidationCity = () =>{
-    return <div>
+    return <div className="form_outline">
         <Container className="form_top">
             <Row className="form_header">
                 <Col sm ={12}>
