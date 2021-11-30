@@ -2,10 +2,16 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import './Styles/table.css';
+import { Link } from 'react-router-dom';
 
 const Tags = () =>{
     return<Container>
-    <div><Button id ="add_click_btn" className = "Add_btn" variant="success">Add+</Button>{' '}</div>
+    <div>
+      <Link to="/FormValidationTag">
+      <Button id ="add_click_btn" className = "Add_btn" variant="success">Add+</Button>
+      {' '}
+      </Link>
+      </div>
     
     <Table striped bordered hover>
       <thead>

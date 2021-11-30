@@ -1,4 +1,5 @@
 import { Col, Container, Row, Form, Button } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 const FormValidationCity = () =>{
     return <div>
@@ -26,7 +27,8 @@ const FormValidationCity = () =>{
             </Row>
             <Row>
                 <Col sm={12} className="form_button">
-                        <Button variant="danger" type="submit">Cancel</Button>
+                <Link to="/city">
+                      <Button variant="danger" type="submit">Cancel</Button> </Link>
                         <Button variant="success" type="submit">Save</Button>
                 </Col>
             </Row>

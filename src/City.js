@@ -1,13 +1,18 @@
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
+import { Link } from 'react-router-dom';
 import './Styles/table.css';
 
 const City = () =>{
   
 return<Container>
-<div><Button id ="add_click_btn" className = "Add_btn" variant="success">Add+</Button>{' '}</div>
+<div>
+  <Link to="/FormValidationCity">
+  <Button id ="add_click_btn"  className = "Add_btn" variant="success">Add+</Button>{' '}
+  </Link></div>
 
+{/* "/FormValidationCity" */}
 <Table striped bordered hover>
   <thead>
     <tr>

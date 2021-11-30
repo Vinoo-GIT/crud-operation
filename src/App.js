@@ -1,4 +1,5 @@
 import Header from './components/Header';
+
 import City from './City';
 import Tags from './Tags';
 import './App.css';
@@ -13,6 +14,8 @@ import {
   Link
 } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
+import FormValidationCity from './components/FormValidationCity';
+import FormValidationTag from './components/FormValidationTag';
 
 const routes = [
  
@@ -26,6 +29,14 @@ const routes = [
     path: "/city",
     sidebar: () => <div>city!</div>,
     main: () => <City/>
+  },
+  {
+    path: "/FormValidationCity",
+    main: () => <FormValidationCity/>
+  },
+  {
+    path: "/FormValidationTag",
+    main: () => <FormValidationTag/>
   }
 ];
 
