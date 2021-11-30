@@ -1,6 +1,7 @@
 import { Col, Container, Row, Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import "../index.css";
 
 const FormValidationCity = () => {
     const {
@@ -26,8 +27,8 @@ const FormValidationCity = () => {
                 <Col sm={12}>
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <Form.Group className="mb-3">
-                            <Form.Label>City Name :</Form.Label>
-                            <input
+                            <Form.Label className = "City-name-text">City Name :</Form.Label>
+                            <input className ="city-validation-form-text-box"
                                 {...register("city", {
                                     required: true,
                                     maxLength: 20,

@@ -59,5 +59,18 @@ code {
 }
 
 /*----------------------------------------------
-          FORM CSS
+          CITY-FORM-VALIDATION CSS
 -----------------------------------------------*/
+.city-validation-form-text-box{
+  
+    padding: 8px;
+    margin: 14px;
+    border: solid;
+    border-radius: 8px;
+
+}
+
+.City-name-text{
+  font-weight: 600;
+  font-size: 30px;
+}
