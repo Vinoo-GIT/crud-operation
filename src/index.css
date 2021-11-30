@@ -31,8 +31,6 @@ code {
 }
 
 /*------------------------------------------------
-          FOOTER CSS
-------------------------------------------------*/
 
 /*----------------------------------------------
           FORM CSS
@@ -61,16 +59,16 @@ code {
 /*----------------------------------------------
           CITY-FORM-VALIDATION CSS
 -----------------------------------------------*/
-.city-validation-form-text-box{
-  
-    padding: 8px;
-    margin: 14px;
-    border: solid;
-    border-radius: 8px;
+.city-validation-form-text-box {
+
+  padding: 8px;
+  margin: 14px;
+  border: solid;
+  border-radius: 8px;
 
 }
 
-.City-name-text{
+.City-name-text {
   font-weight: 600;
   font-size: 30px;
 }
