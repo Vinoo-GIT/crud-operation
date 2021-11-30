@@ -31,13 +31,17 @@ const FormValidationCity = () => {
                             <input className ="city-validation-form-text-box"
                                 {...register("city", {
                                     required: true,
+                                    minLength:2,
                                     maxLength: 20,
                                     pattern: /^[A-Za-z]+$/i
                                 })}
                             />
                             {errors?.city?.type === "required" && <p>This field is required</p>}
                             {errors?.city?.type === "maxLength" && (
-                                <p>First name cannot exceed 20 characters</p>
+                                <p>City name cannot exceed 20 characters</p>
+                            )}
+                            {errors?.city?.type === "minLength" && (
+                                <p>City name cannot be less than 2 characters</p>
                             )}
                             {errors?.city?.type === "pattern" && (
                                 <p>Alphabetical characters only</p>
