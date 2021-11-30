@@ -2,7 +2,7 @@ import { Col, Container, Row, Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 const FormValidationTag = () =>{
-    return <div>
+    return <div className="form_outline">
         <Container className="form_top">
             <Row className="form_header">
                 <Col sm ={12}>
@@ -16,7 +16,7 @@ const FormValidationTag = () =>{
                         <Form.Group className="mb-3">
                         <Form.Label>Tag Name :</Form.Label>
                         <Form.Control type="text" placeholder="Enter New Tag Name" required isInvalid />
-                        <Form.Control.Feedback type="invalid">Please Enter the City Name</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">Please Enter the Tag Name</Form.Control.Feedback>
                         </Form.Group>
                         
                         
