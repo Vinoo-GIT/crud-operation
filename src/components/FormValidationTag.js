@@ -1,6 +1,7 @@
 import { Col, Container, Row, Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import "../index.css";
 
 const FormValidationTag = () =>{
     const {
@@ -27,8 +28,8 @@ const FormValidationTag = () =>{
                     
                         <Form onSubmit={handleSubmit(onSubmit)}>
                         <Form.Group className="mb-3">
-                        <Form.Label>Tag Name :</Form.Label>
-                        <input
+                        <Form.Label className = "City-name-text">Tag Name :</Form.Label>
+                        <input className ="city-validation-form-text-box"
                                 {...register("tag", {
                                     required: true,
                                     maxLength: 20,

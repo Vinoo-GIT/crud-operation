@@ -64,11 +64,11 @@ code {
   padding: 8px;
   margin: 14px;
   border: solid;
-  border-radius: 8px;
+  border-radius: 4px;
 
 }
 
 .City-name-text {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
 }
