@@ -32,6 +32,11 @@ const routes = [
     main: () => <City/>
   },
   {
+    path: "/tag",
+    sidebar: () => <div>tag!</div>,
+    main: () => <Tags/>
+  },
+  {
     path: "/FormValidationCity",
     main: () => <FormValidationCity/>
   },
@@ -57,7 +62,7 @@ const routes = [
           <div className={Classes.side_menu}>
           <ul >
             <li>
-              <Link to="/">Tag</Link>
+              <Link to="/tag">Tag</Link>
             </li>
            
             <li>

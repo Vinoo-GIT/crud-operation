@@ -8,7 +8,7 @@ const Tags = () =>{
     return<Container>
     <div>
       <Link to="/FormValidationTag">
-      <Button id ="add_click_btn" className = "Add_btn" variant="success">Add+</Button>
+      <Button id ="click_btn" className = "Add_btn" variant="success">Add+</Button>
       {' '}
       </Link>
       </div>
