@@ -1,12 +1,13 @@
 import Header from './components/Header';
 
+
 import City from './City';
 import Tags from './Tags';
 import './App.css';
 import Footer  from './components/Footer';
 import React from "react";
 
-import Classes from './components/Sidemenu.module.css'
+import Classes from './components/Sidemenu.module.css'c
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,6 +42,9 @@ const routes = [
 ];
 
  function App() {
+
+
+
   return (
     <div>
       <Header/>
