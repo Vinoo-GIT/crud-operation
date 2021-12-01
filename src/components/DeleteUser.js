@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const DeleteUser = props => {
+const DeleteUser = (props) => {
   const [user, setUser] = useState(props.currentUser);
 
-  const cancel = event => {
+  const cancel = (event) => {
     event.preventDefault();
     props.setActiveModal({ active: false });
   };
@@ -14,7 +14,7 @@ const DeleteUser = props => {
 
   return (
     <form
-      onSubmit={event => {
+      onSubmit={(event) => {
         event.preventDefault();
         props.deleteUser(user.id);
       }}

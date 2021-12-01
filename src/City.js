@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
+// import DeleteUser from "./components/DeleteUser";
 import "./Styles/table.css";
 
 const City = () => {
@@ -31,7 +32,9 @@ const City = () => {
             <td>
               {" "}
               <Button variant="warning">Edit</Button>{" "}
-              <Button variant="danger">Delete</Button>
+              <Button onClick="{DeleteUser}" variant="danger">
+                Delete
+              </Button>
             </td>
           </tr>
           <tr>
