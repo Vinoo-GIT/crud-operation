@@ -32,7 +32,7 @@ const City = () => {
             <td>
               {" "}
               <Button variant="warning">Edit</Button>{" "}
-              <Button onClick="{DeleteUser}" variant="danger">
+              <Button variant="danger">
                 Delete
               </Button>
             </td>

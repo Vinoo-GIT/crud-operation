@@ -1,5 +1,6 @@
 import Header from "./components/Header";
-
+import EditTag from "./components/EditTag";
+import DeleteTag from "./components/DeleteTag";
 import City from "./City";
 import Tags from "./Tags";
 import "./App.css";
@@ -37,6 +38,14 @@ const routes = [
     path: "/FormValidationTag",
     main: () => <FormValidationTag />,
   },
+  {
+    path: "/EditTag",
+    main: () => <EditTag />,
+  },
+  {
+    path:"/DeleteTag",
+    main: () => <DeleteTag />,
+  }
 ];
 
 function App() {

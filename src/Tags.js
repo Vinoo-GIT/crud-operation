@@ -4,6 +4,7 @@ import Table from "react-bootstrap/Table";
 import "./Styles/table.css";
 import { Link } from "react-router-dom";
 
+
 const Tags = () => {
   return (
     <Container>
@@ -28,45 +29,64 @@ const Tags = () => {
             <td>1</td>
             <td>Kia</td>
             <td>
-              {" "}
-              <Button variant="warning">Edit</Button>{" "}
+              
+              <Link to="/EditTag">
+              <Button variant="warning">Edit</Button>
+              </Link>
+              <Link to="/DeleteTag">
               <Button variant="danger">Delete</Button>
+              </Link>
             </td>
           </tr>
           <tr>
             <td>2</td>
             <td>Ford</td>
             <td>
-              {" "}
-              <Button variant="warning">Edit</Button>{" "}
+              
+              <Link to="/EditTag">
+              <Button variant="warning">Edit</Button>
+              </Link>
+              <Link to="/DeleteTag">
               <Button variant="danger">Delete</Button>
+              </Link>
             </td>
           </tr>
           <tr>
             <td>3</td>
             <td>Honda</td>
             <td>
-              {" "}
-              <Button variant="warning">Edit</Button>{" "}
+              <Link to="/EditTag">
+              <Button variant="warning">Edit</Button>
+              </Link>
+              <Link to="/DeleteTag">
               <Button variant="danger">Delete</Button>
+              </Link>
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Hyndai</td>
+            <td>Hyundai</td>
             <td>
-              {" "}
-              <Button variant="warning">Edit</Button>{" "}
+              
+              <Link to="/EditTag">
+              <Button variant="warning">Edit</Button>
+              </Link>
+              <Link to="/DeleteTag">
               <Button variant="danger">Delete</Button>
+              </Link>
             </td>
           </tr>
           <tr>
             <td>5</td>
             <td>Tata</td>
             <td>
-              {" "}
-              <Button variant="warning">Edit</Button>{" "}
+              
+              <Link to="/EditTag">
+              <Button variant="warning">Edit</Button>
+              </Link>
+              <Link to="/DeleteTag">
               <Button variant="danger">Delete</Button>
+              </Link>
             </td>
           </tr>
         </tbody>
