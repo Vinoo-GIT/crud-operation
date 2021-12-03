@@ -1,11 +1,13 @@
-import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Button } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import "./Styles/table.css";
 import { Link } from "react-router-dom";
-
+import { GlobalContext } from "./context/GlobalState";
+import { useContext } from "react";
 
 const Tags = () => {
+  const { users } = useContext(GlobalContext);
+  console.log(users);
   return (
     <Container>
       <div>
@@ -24,72 +26,24 @@ const Tags = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Kia</td>
-            <td>
-              
-              <Link to="/EditTag">
-              <Button variant="warning">Edit</Button>
-              </Link>
-              <Link to="/DeleteTag">
-              <Button variant="danger">Delete</Button>
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Ford</td>
-            <td>
-              
-              <Link to="/EditTag">
-              <Button variant="warning">Edit</Button>
-              </Link>
-              <Link to="/DeleteTag">
-              <Button variant="danger">Delete</Button>
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Honda</td>
-            <td>
-              <Link to="/EditTag">
-              <Button variant="warning">Edit</Button>
-              </Link>
-              <Link to="/DeleteTag">
-              <Button variant="danger">Delete</Button>
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Hyundai</td>
-            <td>
-              
-              <Link to="/EditTag">
-              <Button variant="warning">Edit</Button>
-              </Link>
-              <Link to="/DeleteTag">
-              <Button variant="danger">Delete</Button>
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Tata</td>
-            <td>
-              
-              <Link to="/EditTag">
-              <Button variant="warning">Edit</Button>
-              </Link>
-              <Link to="/DeleteTag">
-              <Button variant="danger">Delete</Button>
-              </Link>
-            </td>
-          </tr>
-        </tbody>
+        {users.map((user) => (
+          <tbody>
+            <tr>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>
+                <Link to="/EditTag">
+                  <Button className="edit-tag-btn" variant="warning">
+                    Edit
+                  </Button>
+                </Link>
+                <Link to="/DeleteTag">
+                  <Button variant="danger">Delete</Button>
+                </Link>
+              </td>
+            </tr>
+          </tbody>
+        ))}
       </Table>
     </Container>
   );

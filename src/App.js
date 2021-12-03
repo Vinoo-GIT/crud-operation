@@ -6,7 +6,7 @@ import Tags from "./Tags";
 import "./App.css";
 import Footer from "./components/Footer";
 import React from "react";
-
+import GlobalProvider from "./context/GlobalState";
 import Classes from "./components/Sidemenu.module.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -41,6 +41,7 @@ const routes = [
   {
     path: "/EditTag",
     main: () => <EditTag />,
+
   },
   {
     path:"/DeleteTag",
@@ -51,6 +52,7 @@ const routes = [
 function App() {
   return (
     <div>
+      <GlobalProvider>
       <Header />
       <Router>
         <div>
@@ -90,6 +92,7 @@ function App() {
         </div>
       </Router>
       <Footer />
+    </GlobalProvider>
     </div>
   );
 }
