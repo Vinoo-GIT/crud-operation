@@ -1,17 +1,30 @@
+import { useContext, useState } from "react";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "../index.css";
+import { GlobalContext } from "../context/GlobalState";
 
 const FormValidationTag = () => {
+  const [name, setName] = useState("");
+  const { addUser } = useContext(GlobalContext);
+  const history = useHistory();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  const onSubmit = () => {
+    const newUser = {
+      id: 6,
+      name,
+    };
+    addUser(newUser);
+    history.push("/");
+  };
+  const onChange = (e) => {
+    setName(e.target.value);
   };
 
   return (
@@ -29,6 +42,8 @@ const FormValidationTag = () => {
               <Form.Group className="mb-3">
                 <Form.Label className="City-name-text">Tag Name :</Form.Label>
                 <input
+                  value={name}
+                  onChange={onChange}
                   className="city-validation-form-text-box"
                   {...register("tag", {
                     required: true,

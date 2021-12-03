@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import EditTag from "./components/EditTag";
-import DeleteTag from "./components/DeleteTag";
+
 import City from "./City";
 import Tags from "./Tags";
 import "./App.css";
@@ -41,58 +41,53 @@ const routes = [
   {
     path: "/EditTag",
     main: () => <EditTag />,
-
   },
-  {
-    path:"/DeleteTag",
-    main: () => <DeleteTag />,
-  }
 ];
 
 function App() {
   return (
     <div>
       <GlobalProvider>
-      <Header />
-      <Router>
-        <div>
-          <Container fluid className={Classes.padding_remove}>
-            <Row>
-              <Col md={2}>
-                <div className={Classes.side_menu}>
-                  <ul>
-                    <li>
-                      <Link to="/tag">Tag</Link>
-                    </li>
+        <Header />
+        <Router>
+          <div>
+            <Container fluid className={Classes.padding_remove}>
+              <Row>
+                <Col md={2}>
+                  <div className={Classes.side_menu}>
+                    <ul>
+                      <li>
+                        <Link to="/tag">Tag</Link>
+                      </li>
 
-                    <li>
-                      <Link to="/city">city</Link>
-                    </li>
-                  </ul>
-                </div>
-              </Col>
-              <Col md={10}>
-                <div>
-                  <Switch>
-                    {routes.map((route, index) => (
-                      // Render more <Route>s with the same paths as
-                      // above, but different components this time.
-                      <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        children={<route.main />}
-                      />
-                    ))}
-                  </Switch>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </Router>
-      <Footer />
-    </GlobalProvider>
+                      <li>
+                        <Link to="/city">city</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+                <Col md={10}>
+                  <div>
+                    <Switch>
+                      {routes.map((route, index) => (
+                        // Render more <Route>s with the same paths as
+                        // above, but different components this time.
+                        <Route
+                          key={index}
+                          path={route.path}
+                          exact={route.exact}
+                          children={<route.main />}
+                        />
+                      ))}
+                    </Switch>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        </Router>
+        <Footer />
+      </GlobalProvider>
     </div>
   );
 }

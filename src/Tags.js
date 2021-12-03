@@ -6,8 +6,9 @@ import { GlobalContext } from "./context/GlobalState";
 import { useContext } from "react";
 
 const Tags = () => {
-  const { users } = useContext(GlobalContext);
+  const { users, removeUser } = useContext(GlobalContext);
   console.log(users);
+
   return (
     <Container>
       <div>
@@ -32,13 +33,15 @@ const Tags = () => {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>
-                <Link to="/EditTag">
+                <Link to={`/EditTag/${user.id}`}>
                   <Button className="edit-tag-btn" variant="warning">
                     Edit
                   </Button>
                 </Link>
-                <Link to="/DeleteTag">
-                  <Button variant="danger">Delete</Button>
+                <Link to="">
+                  <Button onClick={() => removeUser(user.id)} variant="danger">
+                    Delete
+                  </Button>
                 </Link>
               </td>
             </tr>
