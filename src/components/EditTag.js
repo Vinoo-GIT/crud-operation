@@ -1,18 +1,35 @@
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import { useForm } from "react-hook-form";
 import "../index.css";
+import { useContext, useState, useEffect } from "react";
+import { Link, useHistory, useParams } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalState";
+import { v4 as uuid } from "uuid";
 
-const EditTag = () => {
+const EditTag = (props) => {
+  // const [selectedUser, setselectedUser] = useState({
+  //   id: "",
+  //   name: "",
+  // });
+  // const { users, editUser } = useContext(GlobalContext);
+  // const history = useHistory();
+  // const currentUserId = props.match.useParams.id;
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  // useEffect(() => {
+  //   const userId = currentUserId;
+  //   const selectedUser = users.find((user) => user.id === Number(userId));
+  //   setselectedUser(selectedUser);
+  // }, [currentUserId, users]);
 
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  const onSubmit = () => {
+    // history.push("/");
   };
+  const onChange = (e) => {};
 
   return (
     <div className="form_outline">
@@ -29,6 +46,8 @@ const EditTag = () => {
               <Form.Group className="mb-3">
                 <Form.Label className="City-name-text">Tag Name :</Form.Label>
                 <input
+                  // value={selectedUser.name}
+                  onChange={onChange}
                   className="city-validation-form-text-box"
                   {...register("tag", {
                     required: true,
@@ -68,4 +87,3 @@ const EditTag = () => {
 };
 
 export default EditTag;
-
