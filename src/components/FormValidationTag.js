@@ -1,12 +1,13 @@
-import { useContext, useState } from "react";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "../index.css";
+import { useContext, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
+import { v4 as uuid } from "uuid";
 
 const FormValidationTag = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState();
   const { addUser } = useContext(GlobalContext);
   const history = useHistory();
   const {
@@ -17,7 +18,7 @@ const FormValidationTag = () => {
 
   const onSubmit = () => {
     const newUser = {
-      id: 6,
+      id: uuid(),
       name,
     };
     addUser(newUser);

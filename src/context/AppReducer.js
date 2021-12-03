@@ -10,6 +10,18 @@ const AppReducer = (state, action) => {
       return {
         users: [action.payload, ...state.users],
       };
+    case "EDIT_USER":
+      const updateUser = action.payload;
+      const updateusers = state.users.map((user) => {
+        if (user.id === updateUser.id) {
+          return updateUser;
+        }
+        return user;
+      });
+      return {
+        users: updateUsers,
+      };
+
     default:
       return state;
   }
